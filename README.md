@@ -6,7 +6,7 @@ Fetch raw data
     curl -O http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
     curl -O http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
 
-and unzip
+move these into dataset and and unzip
 
     gunzip t*-ubyte.gz
 
