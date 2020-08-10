@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 # parameters
 n_components = 75
-digits = [0, 1, 2, 3, 4]
+digits = [0, 1, 2, 3]
 
 # read data
 images, labels = read_mnist()

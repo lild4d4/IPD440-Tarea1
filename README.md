@@ -26,3 +26,9 @@ will perform basic pca and show the principal components.
 Trying out clustering can be done via
 
     python pyscripts/run_clustering.py
+
+
+## Demo
+<img src="images/clustering.png" alt="drawing" width="750"/>
+
+<img src="images/reconstruction.gif" alt="drawing" width="750"/>
