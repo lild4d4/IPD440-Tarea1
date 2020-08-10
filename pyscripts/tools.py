@@ -9,12 +9,12 @@ def image2vec(image):
 def vec2image(vec):
     return vec.reshape(28, 28)
 
+
 def read_mnist(normalize=True):
     labels = np.load('dataset/train-labels.npy').astype(int)
     images = np.load('dataset/train-images.npy').astype(float)
     if normalize:
-        #images = 2 * images /255 - 1  # rescale to be between -1 and 1
-        images = images /255  # rescale to be between -1 and 1
+        images = images / 255  # rescale to be between 0 and 1
     return images, labels
 
 
@@ -67,8 +67,6 @@ class MnistPlotter:
 
         return fig
 
-
-
     def _draw_single_image(self, ax, image, label=None, fs=50, **kwargs):
 
         # default kwargs
@@ -81,7 +79,7 @@ class MnistPlotter:
 
         # plot image
         cmap = plt.get_cmap(self.cmap)
-        ax.pcolormesh (image, cmap=cmap, **default_kwargs)
+        ax.pcolormesh(image, cmap=cmap, **default_kwargs)
 
         # draw boundaries
         for v in [0, self.size]:
@@ -95,10 +93,6 @@ class MnistPlotter:
         ax.set_aspect('equal')
         ax.set_axis_off()
 
-
         # draw label
         if label is not None:
             ax.text(0.03, 0.84, str(label), fontsize=fs, color='k', transform=ax.transAxes)
-
-
-

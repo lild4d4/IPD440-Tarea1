@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
-from tools import MnistPlotter, read_mnist, image2vec, vec2image
-from sklearn.preprocessing import StandardScaler
+from tools importread_mnist, image2vec, vec2image
+
 
 # parameters
 n_components = 75
@@ -24,15 +24,15 @@ images_rec = [vec2image(x) for x in X_rec]
 
 # colors
 color_dict = {0: 'tab:blue',
-          1: 'tab:orange',
-          2: 'tab:red',
-          3: 'tab:green',
-          4: 'tab:purple',
-          5: 'k',
-          6: 'tab:olive',
-          7: 'tab:brown',
-          8: 'tab:cyan',
-          9: 'tab:pink'}
+              1: 'tab:orange',
+              2: 'tab:red',
+              3: 'tab:green',
+              4: 'tab:purple',
+              5: 'k',
+              6: 'tab:olive',
+              7: 'tab:brown',
+              8: 'tab:cyan',
+              9: 'tab:pink'}
 colors = [color_dict[l] for l in labels]
 
 # plot params

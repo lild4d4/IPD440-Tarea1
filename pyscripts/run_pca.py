@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from tools import MnistPlotter, read_mnist, image2vec, vec2image
-from sklearn.preprocessing import StandardScaler
 
 # parameters
 n_components = 75
@@ -26,7 +25,7 @@ X_pca = pca.fit_transform(X)
 X_rec = pca.inverse_transform(X_pca)
 images_rec = [vec2image(x) for x in X_rec]
 
-# 
+# print result
 explained_variance = pca.explained_variance_ratio_.sum()
 print('Using {} components, explained variance is {}'.format(n_components, explained_variance))
 
