@@ -29,6 +29,6 @@ Trying out clustering can be done via
 
 
 ## Demo
-<img src="images/clustering.png" alt="drawing" width="750"/>
+<img src="demos/clustering.png" alt="drawing" width="750"/>
 
-<img src="images/reconstruction.gif" alt="drawing" width="750"/>
+<img src="demos/reconstruction.gif" alt="drawing" width="750"/>
