@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
-from tools importread_mnist, image2vec, vec2image
+from tools import read_mnist, image2vec, vec2image
 
 
 # parameters
