@@ -11,8 +11,8 @@ def vec2image(vec):
 
 
 def read_mnist(normalize=True):
-    labels = np.load('../dataset/train-labels.npy').astype(int)
-    images = np.load('../dataset/train-images.npy').astype(float)
+    labels = np.load('ipd-440-tarea-1/dataset/train-labels.npy').astype(int)
+    images = np.load('ipd-440-tarea-1/dataset/train-images.npy').astype(float)
     if normalize:
         images = images / 255  # rescale to be between 0 and 1
     return images, labels
