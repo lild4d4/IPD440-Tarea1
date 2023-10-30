@@ -11,8 +11,8 @@ def vec2image(vec):
 
 
 def read_mnist(normalize=True):
-    labels = np.load('dataset/train-labels.npy').astype(int)
-    images = np.load('dataset/train-images.npy').astype(float)
+    labels = np.load('../dataset/train-labels.npy').astype(int)
+    images = np.load('../dataset/train-images.npy').astype(float)
     if normalize:
         images = images / 255  # rescale to be between 0 and 1
     return images, labels
@@ -67,7 +67,7 @@ class MnistPlotter:
 
         return fig
 
-    def _draw_single_image(self, ax, image, label=None, fs=50, **kwargs):
+    def _draw_single_image(self, ax, image, label=None, title=None, fs=50, **kwargs):
 
         # default kwargs
         default_kwargs = dict(vmin=0, vmax=1, edgecolor='k', lw=self.lw)
@@ -92,6 +92,10 @@ class MnistPlotter:
         ax.invert_yaxis()
         ax.set_aspect('equal')
         ax.set_axis_off()
+
+        # set title
+        if title is not None:
+            plt.title(title)
 
         # draw label
         if label is not None:
